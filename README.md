@@ -1,3 +1,3 @@
 # Paper Flat Light UI theme
 
-A light UI theme for Atom, based on Light UI.
+A fork of light UI theme for Atom.
