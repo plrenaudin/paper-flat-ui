@@ -1,7 +1,7 @@
 {
   "name": "paper-flat-ui",
   "theme": "ui",
-  "version": "0.47.0",
+  "version": "0.48.0",
   "description": "A light UI theme for Atom based on Atom light UI",
   "keywords": [
     "UI",
