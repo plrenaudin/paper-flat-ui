@@ -5,110 +5,88 @@
 @tab-bottom-border-height: 3px;
 @tab-border: 1px solid @tab-border-color;
 @tab-max-width: 160px;
-
 .tab-bar {
-  height: @tab-height + @tab-top-padding + @tab-bottom-border-height;
-  padding: 0 10px 0 25px;
-  overflow-x: auto;
-  overflow-y: hidden;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-
-  &:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    height: @tab-bottom-border-height;
-    left: 0;
-    right: 0;
-    background-color: @tab-background-color-active;
-    pointer-events: none;
-  }
-
-  .tab {
-    position: relative;
-    top: @tab-top-padding;
-    max-width: @tab-max-width;
-    height: @tab-height;
-    line-height: @tab-height;
-    color: @text-color;
-    padding: 0 0 0 5px;
-    margin: 0 20px 0 5px;
-    transition: color .1s ease-in;
-
-    &:before, &:after {
-      content: '';
-      position: absolute;
-      width: 25px;
-      height: @tab-height;
-    }
-
-    .close-icon {
-      //right: 0;
-      z-index: 3;
-      text-align: right;
-      line-height: @tab-height;
-      color: @text-color;
-
-      &:hover {
-        color: inherit;
-      }
-    }
-
-    &.modified:not(:hover) .close-icon {
-      //right: 0;
-      top: @tab-height/2 - @modified-icon-width/2 + 1px;
-      width: @modified-icon-width;
-      height: @modified-icon-width;
-    }
-
-    &.modified:hover .close-icon:hover {
-      color: @text-color-highlight;
-      cursor: pointer;
-    }
-
-    .title {
-      position: relative;
-      z-index: 1;
-      padding-right: 10px
-    }
-  }
-
-  .tab.active {
-    z-index: 1;
-    color: @text-color-highlight;
-
-    .close-icon {
-      line-height: @tab-height - 1px;
-      color: @text-color;
-    }
-
-    &, &:before, &:after {
-      background: @tab-background-color-active;
-      height: @tab-height + 1px;
-    }
-  }
-
-  .tab:hover {
-    color: @text-color-highlight;
-  }
-
-  .tab.active:hover .close-icon {
-    color: @text-color;
-
-    &:hover {
-      color: inherit;
-    }
-  }
-
-  .placeholder {
     height: @tab-height + @tab-top-padding + @tab-bottom-border-height;
-    margin-left: -9px; // center between tabs
-    pointer-events: none;
-    &:after {
-      top: @tab-height + @tab-top-padding + @tab-bottom-border-height - 2px;
+    padding: 0 10px 0 25px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    &::-webkit-scrollbar {
+        display: none;
     }
-  }
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        height: @tab-bottom-border-height;
+        left: 0;
+        right: 0;
+        background-color: @tab-background-color-active;
+        pointer-events: none;
+    }
+    .tab {
+        position: relative;
+        top: @tab-top-padding;
+        max-width: @tab-max-width;
+        height: @tab-height;
+        line-height: @tab-height;
+        color: @text-color;
+        padding: 0 0 0 5px;
+        margin: 0 20px 0 5px;
+        transition: color 0.1s ease-in;
+        .close-icon {
+            z-index: 3;
+            text-align: right;
+            line-height: @tab-height;
+            color: @text-color;
+            &:hover {
+                color: inherit;
+            }
+        }
+        &.modified:not(:hover) .close-icon {
+            top: @tab-height/2 - @modified-icon-width/2 + 1px;
+            width: @modified-icon-width;
+            height: @modified-icon-width;
+        }
+        &.modified:hover .close-icon:hover {
+            color: @text-color-highlight;
+            cursor: pointer;
+        }
+        .title {
+            position: relative;
+            z-index: 1;
+            padding-right: 10px;
+        }
+    }
+    .tab.active {
+        z-index: 0;
+        color: #000;
+        -webkit-box-shadow: -6px 6px 25px 0 rgba(0, 0, 0, 0.75);
+        .close-icon {
+            line-height: @tab-height - 1px;
+            color: @text-color;
+        }
+        &,
+        &:before,
+        &:after {
+            background: @tab-background-color-active;
+            height: @tab-height + 1px;
+        }
+    }
+    .tab:hover {
+        color: @text-color-highlight;
+    }
+    .tab.active:hover .close-icon {
+        color: @text-color;
+        &:hover {
+            color: inherit;
+        }
+    }
+    .placeholder {
+        height: @tab-height + @tab-top-padding + @tab-bottom-border-height;
+        margin-left: -9px; // center between tabs
+        pointer-events: none;
+        &:after {
+            top: @tab-height + @tab-top-padding + @tab-bottom-border-height - 2px;
+        }
+    }
 }

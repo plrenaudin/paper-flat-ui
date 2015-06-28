@@ -1,53 +1,43 @@
 @import "ui-variables";
-
 @scrollbar-width: 5px;
 @scrollbar-background-color: transparent;
 @scrollbar-color-editor: @base-background-color;
 @scrollbar-background-color-editor: transparent;
 @scrollbar-color: @text-color;
 
-
 // Scrollbars ------------------------------------
-
 .scrollbars-visible-always {
-	/deep/ ::-webkit-scrollbar {
-		width: @scrollbar-width;
-	}
-
-	/deep/ ::-webkit-scrollbar-track {
-		background: @app-background-color;
-	}
-
-	/deep/ ::-webkit-scrollbar-thumb {
-		//border: 3px solid @scrollbar-background-color;
-		background: @scrollbar-color;
-		background-clip: content-box;
-	}
-
-	/deep/ ::-webkit-scrollbar-corner {
-		background: @scrollbar-background-color;
-	}
-
-	/deep/ ::-webkit-scrollbar-thumb:vertical:active {
-		border-left-width: 0;
-		border-right-width: 0;
-	}
-
-	/deep/ ::-webkit-scrollbar-thumb:horizontal:active {
-		border-top-width: 0;
-		border-bottom-width: 0;
-	}
-
-	atom-text-editor {
-		/deep/ ::-webkit-scrollbar-track {
-			background: @scrollbar-background-color-editor;
-		}
-		/deep/ ::-webkit-scrollbar-corner {
-			background: @scrollbar-background-color-editor;
-		}
-		/deep/ ::-webkit-scrollbar-thumb {
-			border-color: @scrollbar-background-color-editor;
-			background: @tab-background-color-active;
-		}
-	}
+    /deep/::-webkit-scrollbar {
+        width: @scrollbar-width;
+    }
+    /deep/::-webkit-scrollbar-track {
+        background: @app-background-color;
+    }
+    /deep/::-webkit-scrollbar-thumb {
+        background: @scrollbar-color;
+        background-clip: content-box;
+    }
+    /deep/::-webkit-scrollbar-corner {
+        background: @scrollbar-background-color;
+    }
+    /deep/::-webkit-scrollbar-thumb:vertical:active {
+        border-left-width: 0;
+        border-right-width: 0;
+    }
+    /deep/::-webkit-scrollbar-thumb:horizontal:active {
+        border-top-width: 0;
+        border-bottom-width: 0;
+    }
+    atom-text-editor {
+        /deep/::-webkit-scrollbar-track {
+            background: @scrollbar-background-color-editor;
+        }
+        /deep/::-webkit-scrollbar-corner {
+            background: @scrollbar-background-color-editor;
+        }
+        /deep/::-webkit-scrollbar-thumb {
+            border-color: @scrollbar-background-color-editor;
+            background: @tab-background-color-active;
+        }
+    }
 }
