@@ -3,7 +3,7 @@
   "theme": "ui",
   "version": "0.0.0",
   "description": "A light UI theme for Atom based on Atom light UI",
-  "repository": "https://github.com/plrenaudin/paper-light-ui.git",
+  "repository": "https://github.com/plrenaudin/paper-flat-ui.git",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
