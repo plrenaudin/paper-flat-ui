@@ -29,13 +29,17 @@
         max-width: @tab-max-width;
         height: @tab-height;
         line-height: @tab-height;
-        color: @text-color;
+        color: @text-color;d
         padding: 0 0 0 5px;
         margin: 0 20px 0 5px;
         transition: color 0.1s ease-in;
         .close-icon {
+            visibility: hidden;
+        }
+        .active .close-icon,
+        &:hover .close-icon {
+            visibility: visible;
             z-index: 3;
-            text-align: right;
             line-height: @tab-height;
             color: @text-color;
             &:hover {
@@ -43,7 +47,9 @@
             }
         }
         &.modified:not(:hover) .close-icon {
+            visibility: visible;
             top: @tab-height/2 - @modified-icon-width/2 + 1px;
+            right:14px;
             width: @modified-icon-width;
             height: @modified-icon-width;
         }
@@ -62,6 +68,7 @@
         color: #000;
         -webkit-box-shadow: -6px 6px 25px 0 rgba(0, 0, 0, 0.75);
         .close-icon {
+            visibility: visible;
             line-height: @tab-height - 1px;
             color: @text-color;
         }
