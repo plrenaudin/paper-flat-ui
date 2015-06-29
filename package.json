@@ -10,6 +10,7 @@
     "flat",
     "paper"
   ],
+  "main": "lib/settings",
   "repository": "https://github.com/plrenaudin/paper-flat-ui.git",
   "license": "MIT",
   "engines": {
