@@ -1,15 +1,19 @@
 module.exports =
-  config:
+    config:
+        fontSize:
+            title: 'Font Size'
+            description: 'Change the UI font size. Needs to be between 10 and 20.'
+            type: ['integer', 'string']
+            minimum: 10
+            maximum: 20
+            default: 'Auto'
 
-    fontSize:
-      title: 'Font Size'
-      description: 'Change the UI font size. Needs to be between 10 and 20.'
-      type: ['integer', 'string']
-      minimum: 10
-      maximum: 20
-      default: 'Auto'
+        tabColor:
+            type: 'string'
+            default: 'Grey'
+            enum: ['Red', 'Pink', 'Purple', 'Deep Purple', 'Indigo', 'Blue', 'Light Blue', 'Cyan', 'Teal', 'Green', 'Light Green', 'Lime', 'Yellow', 'Amber', 'Orange', 'Deep Orange', 'Brown', 'Grey', 'Blue Grey']
 
-  activate: (state) ->
-    atom.themes.onDidChangeActiveThemes ->
-      Config = require './config'
-      Config.apply()
+    activate: (state) ->
+        atom.themes.onDidChangeActiveThemes ->
+            Config = require './config'
+            Config.apply()
