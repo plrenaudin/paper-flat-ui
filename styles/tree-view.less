@@ -1,10 +1,14 @@
 @import "ui-variables";
 .tree-view {
+    direction: ltr;
     font-size: @font-size;
     background: @tree-view-background-color;
     .selected:before {
         background: @background-color-selected;
     }
+}
+.tree-view-scroller {
+    direction: rtl;
 }
 .tree-view-resizer {
     .tree-view-resize-handle {

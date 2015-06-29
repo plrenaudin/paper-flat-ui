@@ -8,6 +8,7 @@
 .tab-bar {
     height: @tab-height + @tab-top-padding + @tab-bottom-border-height;
     padding: 0 10px 0 25px;
+    z-index: 3;
     overflow-x: auto;
     overflow-y: hidden;
     &::-webkit-scrollbar {
@@ -67,7 +68,7 @@
     .tab.active {
         z-index: 0;
         color: #000;
-        -webkit-box-shadow: -6px 6px 25px 0 rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: -6px 6px 15px 0 rgba(0, 0, 0, 0.75);
         .close-icon {
             visibility: visible;
             line-height: @tab-height - 1px;

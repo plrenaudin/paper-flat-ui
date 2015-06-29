@@ -1,5 +1,5 @@
 @import "ui-variables";
-@scrollbar-width: 5px;
+@scrollbar-size: 5px;
 @scrollbar-background-color: transparent;
 @scrollbar-color-editor: @base-background-color;
 @scrollbar-background-color-editor: transparent;
@@ -8,7 +8,8 @@
 // Scrollbars ------------------------------------
 .scrollbars-visible-always {
     /deep/::-webkit-scrollbar {
-        width: @scrollbar-width;
+        width: @scrollbar-size;
+        height: @scrollbar-size;
     }
     /deep/::-webkit-scrollbar-track {
         background: @app-background-color;
