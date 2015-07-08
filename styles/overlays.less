@@ -13,8 +13,10 @@ atom-panel.modal,
         background: @base-background-color;
     }
     .select-list {
-        box-shadow: 0 0 40px @base-border-color;
         atom-text-editor[mini] {
+            box-shadow: 0 0 40px @base-border-color;
+            position: relative;
+            z-index: 1;
             margin: 10px 0;
             max-height: 36px;
             height: 36px;
@@ -23,6 +25,7 @@ atom-panel.modal,
     }
     .select-list ol.list-group,
     &.select-list ol.list-group {
+        box-shadow: 0 0 40px @base-border-color;
         background-color: @inset-panel-background-color;
         margin: 0;
         li {
