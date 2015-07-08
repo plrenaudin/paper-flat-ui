@@ -1,20 +1,33 @@
 atom-panel.modal,
 .overlay {
+    width: 50%;
+    margin-left: -25%;
     color: @text-color;
-    background-color: @overlay-background-color;
-    padding: @component-padding;
-    box-shadow: 0 0 40px @base-border-color;
+    background-color: transparent;
+    padding: 0;
     atom-text-editor[mini] {
-        margin-bottom: @component-padding;
+        //box-shadow: 0 0 40px @base-border-color;
+    }
+    .error-message, .loading {
+        padding: 10px;
+        background: @base-background-color;
+    }
+    .select-list {
+        box-shadow: 0 0 40px @base-border-color;
+        atom-text-editor[mini] {
+            margin: 10px 0;
+            max-height: 36px;
+            height: 36px;
+            padding: 5px;
+        }
     }
     .select-list ol.list-group,
     &.select-list ol.list-group {
         background-color: @inset-panel-background-color;
+        margin: 0;
         li {
             padding: @component-padding;
             border-top: 1px solid @inset-panel-border-color;
-            border-left: 1px solid @inset-panel-border-color;
-            border-right: 1px solid @inset-panel-border-color;
             &:last-child {
                 border-bottom: 1px solid @inset-panel-border-color;
             }
