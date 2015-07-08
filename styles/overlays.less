@@ -1,58 +1,56 @@
 atom-panel.modal,
 .overlay {
-    width: 50%;
-    margin-left: -25%;
-    color: @text-color;
-    background-color: transparent;
+  width: 50%;
+  margin-left: -25%;
+  color: @text-color;
+  background-color: transparent;
+  .tree-view-dialog {
+    padding: 10px;
+    background: @base-background-color;
+    box-shadow: 0 0 40px @base-border-color;
+  }
+  .error-message,
+  .loading {
+    padding: 10px;
+    background: @base-background-color;
+  }
+  .select-list {
     atom-text-editor[mini] {
-        //box-shadow: 0 0 40px @base-border-color;
-    }
-    .tree-view-dialog {
-      padding: 10px;
-      background: @base-background-color;
       box-shadow: 0 0 40px @base-border-color;
+      position: relative;
+      z-index: 1;
+      margin: 10px 0;
+      max-height: 36px;
+      height: 36px;
+      padding: 5px;
     }
-    .error-message, .loading {
-        padding: 10px;
-        background: @base-background-color;
-    }
-    .select-list {
-        atom-text-editor[mini] {
-            box-shadow: 0 0 40px @base-border-color;
-            position: relative;
-            z-index: 1;
-            margin: 10px 0;
-            max-height: 36px;
-            height: 36px;
-            padding: 5px;
+  }
+  .select-list ol.list-group,
+  &.select-list ol.list-group {
+    box-shadow: 0 0 40px @base-border-color;
+    background-color: @inset-panel-background-color;
+    margin: 0;
+    max-height: 500px;
+    li {
+      padding: @component-padding;
+      border-top: 1px solid @inset-panel-border-color;
+      &:last-child {
+        border-bottom: 1px solid @inset-panel-border-color;
+      }
+      &.two-lines {
+        padding: @component-padding/2 @component-padding;
+      }
+      &.selected {
+        color: @text-color;
+        background-color: @background-color-highlight;
+      }
+      .status.icon {
+        float: right;
+        margin-left: @component-icon-padding;
+        &:before {
+          margin-right: 0;
         }
+      }
     }
-    .select-list ol.list-group,
-    &.select-list ol.list-group {
-        box-shadow: 0 0 40px @base-border-color;
-        background-color: @inset-panel-background-color;
-        margin: 0;
-        max-height: 500px;
-        li {
-            padding: @component-padding;
-            border-top: 1px solid @inset-panel-border-color;
-            &:last-child {
-                border-bottom: 1px solid @inset-panel-border-color;
-            }
-            &.two-lines {
-                padding: @component-padding/2 @component-padding;
-            }
-            &.selected {
-                color: @text-color;
-                background-color: @background-color-highlight;
-            }
-            .status.icon {
-                float: right;
-                margin-left: @component-icon-padding;
-                &:before {
-                    margin-right: 0;
-                }
-            }
-        }
-    }
+  }
 }

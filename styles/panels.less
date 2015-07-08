@@ -1,28 +1,28 @@
 @import "buttons";
 .panel {
-    &.bordered {
-        border: 1px solid @base-border-color;
-        border-radius: @component-border-radius;
-    }
+  &.bordered {
+    border: 1px solid @base-border-color;
+    border-radius: @component-border-radius;
+  }
 }
 atom-panel,
 .tool-panel {
-    .text(normal);
-    position: relative;
+  .text(normal);
+  position: relative;
 }
 .inset-panel {
-    position: relative;
-    background-color: @inset-panel-background-color;
+  position: relative;
+  background-color: @inset-panel-background-color;
 }
 .panel-heading {
-    border-bottom: none;
-    padding: @component-padding - 2px @component-padding;
-    background-color: transparent;
-    .btn {
-        @bg: lighten(@button-background-color, 10%);
-        @hover: lighten(@button-background-color-hover, 10%);
-        @selected: lighten(@button-background-color-selected, 10%);
-        @text: lighten(@text-color, 10%);
-        .btn-background(@bg, @hover, @selected, @button-border-color, @text, @text);
-    }
+  border-bottom: none;
+  padding: @component-padding - 2px @component-padding;
+  background-color: transparent;
+  .btn {
+    @bg: lighten(@button-background-color, 10%);
+    @hover: lighten(@button-background-color-hover, 10%);
+    @selected: lighten(@button-background-color-selected, 10%);
+    @text: lighten(@text-color, 10%);
+    .btn-background(@bg, @hover, @selected, @button-border-color, @text, @text);
+  }
 }
