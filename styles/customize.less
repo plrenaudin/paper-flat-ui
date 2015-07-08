@@ -1,0 +1,37 @@
+body[color="Grey"] {.customize(@grey)}
+body[color="Red"] {.customize(@red)}
+body[color="Pink"] {.customize(@pink)}
+body[color="Purple"] {.customize(@purple)}
+body[color="Deep Purple"] {.customize(@deep-purple)}
+body[color="Indigo"] {.customize(@indigo)}
+body[color="Blue"] {.customize(@blue)}
+body[color="Light Blue"] {.customize(@light-blue)}
+body[color="Cyan"] {.customize(@cyan)}
+body[color="Teal"] {.customize(@teal)}
+body[color="Green"] {.customize(@green)}
+body[color="Light Green"] {.customize(@light-green)}
+body[color="Lime"] {.customize(@lime)}
+body[color="Yellow"] {.customize(@yellow)}
+body[color="Amber"] {.customize(@amber)}
+body[color="Orange"] {.customize(@orange)}
+body[color="Deep Orange"] {.customize(@deep-orange)}
+body[color="Brown"] {.customize(@brown)}
+body[color="Blue Grey"] {.customize(@blue-grey)}
+
+.customize(@customColor) {
+  .tab-bar .tab.active {
+    background: @customColor;
+  }
+  .tab-bar:after {
+    background: @customColor;
+  }
+  .tree-view .selected:before {
+    background: @customColor;
+  }
+  .select-list ol.list-group,
+  &.select-list ol.list-group {
+      .character-match {
+        color: @customColor;
+      }
+  }
+}

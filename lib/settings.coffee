@@ -8,9 +8,9 @@ module.exports =
       maximum: 20
       default: 'Auto'
 
-    tabColor:
+    color:
       type: 'string'
-      default: 'Grey'
+      default: 'Green'
       enum: [
         'Red',
         'Pink',

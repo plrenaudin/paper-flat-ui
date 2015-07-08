@@ -11,14 +11,14 @@ module.exports =
       else if currentFontSize is 'Auto'
         root.style.fontSize = ''
 
-    setTabColor = (color) ->
-      root.setAttribute('tab-color', color?='Grey')
+    setColor = (color) ->
+      root.setAttribute('color', color?='Green')
 
     atom.config.onDidChange 'paper-flat-ui.fontSize', ->
       setFontSize(atom.config.get('paper-flat-ui.fontSize'))
 
-    atom.config.onDidChange 'paper-flat-ui.tabColor', ->
-      setTabColor(atom.config.get('paper-flat-ui.tabColor'))
+    atom.config.onDidChange 'paper-flat-ui.color', ->
+      setColor(atom.config.get('paper-flat-ui.color'))
 
     setFontSize(atom.config.get('paper-flat-ui.fontSize'))
-    setTabColor(atom.config.get('paper-flat-ui.tabColor'))
+    setColor(atom.config.get('paper-flat-ui.color'))
