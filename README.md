@@ -6,6 +6,4 @@ The screenshots below show this theme used with [Monokai](https://atom.io/themes
 
 ![screenshot](http://ks3352370.kimsufi.com/public/grey.png)
 
-You can adjust the **font size** and **tab color** in the theme settings
-
-![colors](http://ks3352370.kimsufi.com/public/colors.png)
+You can adjust the **font size** and change **color** in the theme settings
