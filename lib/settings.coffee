@@ -8,6 +8,11 @@ module.exports =
       maximum: 20
       default: 'Auto'
 
+    useFancyStyle:
+      type: 'boolean'
+      description: 'Use fancy style. Uncheck if it breaks some features.'
+      default: true
+
     color:
       type: 'string'
       default: 'Green'

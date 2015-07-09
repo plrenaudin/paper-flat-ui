@@ -3,6 +3,9 @@
 body[fancy] {
   atom-panel.modal,
   .overlay {
+    width: 50%;
+    margin-left: -25%;
+    box-shadow: none;
     background-color: transparent;
     padding: 0;
     atom-text-editor[mini] {
@@ -31,6 +34,7 @@ body[fancy] {
     .select-list ol.list-group,
      &.select-list ol.list-group {
       box-shadow: 0 0 40px @base-border-color;
+      max-height: 500px;
     }
   }
 }
