@@ -15,29 +15,19 @@
   }
   /deep/::-webkit-scrollbar-thumb {
     background: @scrollbar-color;
-    background-clip: content-box;
   }
   /deep/::-webkit-scrollbar-corner {
     background: @scrollbar-background-color;
   }
-  /deep/::-webkit-scrollbar-thumb:vertical:active {
-    border-left-width: 0;
-    border-right-width: 0;
-  }
-  /deep/::-webkit-scrollbar-thumb:horizontal:active {
-    border-top-width: 0;
-    border-bottom-width: 0;
-  }
   atom-text-editor {
-    /deep/::-webkit-scrollbar-track {
-      background: @scrollbar-background-color-editor;
+    /deep/::-webkit-scrollbar-thumb {
+      background: @tab-background-color-active;
     }
     /deep/::-webkit-scrollbar-corner {
       background: @scrollbar-background-color-editor;
     }
-    /deep/::-webkit-scrollbar-thumb {
-      border-color: @scrollbar-background-color-editor;
-      background: @tab-background-color-active;
+    /deep/::-webkit-scrollbar-track {
+      background: @scrollbar-background-color-editor;
     }
   }
 }

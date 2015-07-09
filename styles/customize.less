@@ -1,3 +1,42 @@
+// Layouts
+
+body[fancy] {
+  atom-panel.modal,
+  .overlay {
+    background-color: transparent;
+    padding: 0;
+    atom-text-editor[mini] {
+        margin-bottom: @component-padding;
+    }
+    .tree-view-dialog {
+      padding: 10px;
+      background: @base-background-color;
+      box-shadow: 0 0 40px @base-border-color;
+    }
+    .error-message, .loading {
+      padding: 10px;
+      background: @base-background-color;
+    }
+    .select-list {
+      atom-text-editor[mini] {
+        box-shadow: 0 0 40px @base-border-color;
+        margin: 10px 0;
+        position:relative;
+        z-index: 1;
+        max-height: 36px;
+        height: 36px;
+        padding: 5px;
+      }
+    }
+    .select-list ol.list-group,
+     &.select-list ol.list-group {
+      box-shadow: 0 0 40px @base-border-color;
+    }
+  }
+}
+
+// Colors
+
 body[color="Grey"] {.customize(@grey)}
 body[color="Red"] {.customize(@red)}
 body[color="Pink"] {.customize(@pink)}
@@ -33,5 +72,8 @@ body[color="Blue Grey"] {.customize(@blue-grey)}
     .character-match {
       color: @customColor;
     }
+  }
+  .scrollbars-visible-always atom-text-editor /deep/::-webkit-scrollbar-thumb {
+    background: @customColor;
   }
 }
