@@ -11,7 +11,7 @@ body[fancy] {
     atom-text-editor[mini] {
         margin-bottom: @component-padding;
     }
-    .tree-view-dialog {
+    .tree-view-dialog, .go-to-line {
       padding: 10px;
       background: @base-background-color;
       box-shadow: 0 0 40px @base-border-color;
@@ -76,6 +76,9 @@ body[color="Blue Grey"] {.customize(@blue-grey)}
     .character-match {
       color: @customColor;
     }
+  }
+  .list-item.selected::before {
+    background: @customColor;
   }
   .scrollbars-visible-always atom-text-editor /deep/::-webkit-scrollbar-thumb {
     background: @customColor;
