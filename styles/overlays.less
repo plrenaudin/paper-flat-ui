@@ -7,14 +7,15 @@ atom-panel.modal,
     atom-text-editor[mini] {
         margin-bottom: @component-padding;
     }
+    &.from-top {
+      top: 25%
+    }
     .select-list ol.list-group,
     &.select-list ol.list-group {
         background-color: @inset-panel-background-color;
         li {
             padding: @component-padding;
             border-top: 1px solid @inset-panel-border-color;
-            border-left: 1px solid @inset-panel-border-color;
-            border-right: 1px solid @inset-panel-border-color;
             &:last-child {
                 border-bottom: 1px solid @inset-panel-border-color;
             }
