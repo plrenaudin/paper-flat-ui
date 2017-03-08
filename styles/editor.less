@@ -1,4 +1,4 @@
-atom-text-editor[mini], atom-text-editor[mini]::shadow {
+atom-text-editor[mini], atom-text-editor[mini].editor {
   color: lighten(@text-color, 15%);
   background-color: darken(@input-background-color, 1%);
   border: 1px solid transparent;
@@ -16,7 +16,7 @@ atom-text-editor[mini], atom-text-editor[mini]::shadow {
   }
 }
 atom-text-editor[mini].is-focused,
-atom-text-editor[mini].is-focused::shadow {
+atom-text-editor[mini].is-focused.editor {
   color: @text-color;
   background-color: @input-background-color;
   .placeholder-text {
